@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 align=center>How are you feeling?</h1>
+    <form id="form">
+     <input type="radio" name="emotion" value="male"> Joyful<br>
+     <input type="radio" name="emotion" value="female"> Angry<br>
+     <input type="radio" name="emotion" value="female"> Sad<br>
+     <input type="radio" name="emotion" value="female"> Afraid<br>
+     <input type="radio" name="emotion" value="female"> Disgusted<br>
+      <input type="radio" name="emotion" value="other"> Other<br>
+      <input type="submit" value="Submit">
+   </form>
+<div class="" align=center>
+   <h1 id="text"></h1>
+   <img id="image" src="https://media.wired.com/photos/59371d19ca941e4d0cb7ce7f/master/w_440,c_limit/ap_insideout_ff1.jpg" width="80%">
+     <script>
+     document.getElementById('form').addEventListener('submit', function(e) {
+       e.preventDefault()
+       console.log(e)
+       if (e.target[0].checked) {
+       document.getElementById('text').innerHTML = 'Joyful';
+       document.getElementById('image').src = 'https://media.giphy.com/media/YOWvh3ktrDC4o/giphy.gif';
+
+        } else if  (e.target[1].checked) {
+        document.getElementById('text').innerHTML = 'Angry';
+        document.getElementById('image').src = 'https://media.giphy.com/media/11tTNkNy1SdXGg/giphy.gif';
+
+        } else if (e.target[2].checked) {
+        document.getElementById('text').innerHTML = 'Sad';
+        document.getElementById('image').src = 'https://media.giphy.com/media/13wRu1xRTswrcc/giphy.gif';
+
+        } else if (e.target[3].checked) {
+        document.getElementById('text').innerHTML = 'Afraid';
+        document.getElementById('image').src = 'https://cdn-enterprise.discourse.org/gethopscotch1/uploads/default/original/2X/2/2897fbcb56e849ee3055ed9f1b01e31eb9d2f592.gif';
+        } else if (e.target[4].checked) {
+        document.getElementById('text').innerHTML = 'Disgusted';
+        document.getElementById('image').src = 'http://www.pajiba.com/image/Disgust-inside-out.gif';
+        } else if (e.target[5].checked) {
+        document.getElementById('text').innerHTML = 'You have discovered a new emotion. Congratulations!';
+        document.getElementById('image').src = 'https://iphonephotog.files.wordpress.com/2015/02/cloudfalls.jpg';
+
+      } })
+     </script>
+     </div>
+  </body>
+</html>
